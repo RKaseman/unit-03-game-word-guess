@@ -10,29 +10,33 @@ var wordArray = [
     "eigth"
 ];
 
+var wordPicked = Math.floor(Math.random() * wordArray.length);
+console.log("wordArray[wordPicked] " + wordArray[wordPicked]);
+
 // generate a random word...
 function wordGen() {
     // ...from array
-    var wordPicked = Math.floor(Math.random() * wordArray.length);
-    console.log("wordArray[wordPicked] " + wordArray[wordPicked]);
+    // var wordPicked = Math.floor(Math.random() * wordArray.length);
+    // console.log("wordArray[wordPicked] " + wordArray[wordPicked]);
     // output of wordGen function
     return wordArray[wordPicked];
-    var hideWord = document.createElement("INPUT");
+    var hideWord = document.createTextNode("Hello World");
+    // var hideWord = document.createElement("INPUT");
     hideWord.setAttribute("type", "hidden");
     document.body.appendChild(hideWord);
     document.getElementById("newWord").innerHTML = wordGen();
 }
 
-document.onkeyup = function(event) {
+document.onkeyup = function (event) {
     // Determines which key was pressed.
     var letterGuess = event.key;
     console.log(event.key);
     // var result = wordGen().charAt(4);
     // console.log(result);
-    if (letterGuess === wordGen().charAt(4)) {
+    if (letterGuess === wordGen().charAt(2)) {
         document.getElementById("newWord").innerHTML = "test";
     }
-    }
+}
 
 // function myFunction() {
 //     var str = "HELLO WORLD";
@@ -43,7 +47,6 @@ document.onkeyup = function(event) {
 // if (letterGuess === wordGen().charAt(4)) {
 //     document.getElementById("newWord").innerHTML = res;
 // }
-
 
 // function startHidden() {
 //     var hideWord = document.createElement("INPUT");
