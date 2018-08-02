@@ -22,12 +22,11 @@ function wordGen() {
     document.body.appendChild(hideWord);
     document.getElementById("newWord").innerHTML = wordGen();
 }
-console.log("wordGen " + wordGen());
 
 document.onkeyup = function(event) {
     // Determines which key was pressed.
     var letterGuess = event.key;
-    console.log(letterGuess);
+    console.log(event.key);
     // var result = wordGen().charAt(4);
     // console.log(result);
     if (letterGuess === wordGen().charAt(4)) {
