@@ -1,4 +1,6 @@
 
+var hiddenWord;
+
 var wordArray = [
     "first",
     "second",
@@ -19,11 +21,11 @@ function wordGen() {
     // var wordPicked = Math.floor(Math.random() * wordArray.length);
     // console.log("wordArray[wordPicked] " + wordArray[wordPicked]);
     // output of wordGen function
-    return wordArray[wordPicked];
-    var hideWord = document.createTextNode("Hello World");
+    // return wordArray[wordPicked];
+    // var hideWord = document.createTextNode("Hello World");
     // var hideWord = document.createElement("INPUT");
-    hideWord.setAttribute("type", "hidden");
-    document.body.appendChild(hideWord);
+    wordPicked.setAttribute("type", "hidden");
+    document.body.appendChild(wordPicked);
     document.getElementById("newWord").innerHTML = wordGen();
 }
 
