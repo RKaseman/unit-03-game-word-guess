@@ -1,22 +1,22 @@
 
-// var hiddenWord;
+var hiddenWord;
 
-// var wordArray = [
-//     "first",
-//     "second",
-//     "third",
-//     "fourth",
-//     "fifth",
-//     "sixth",
-//     "seventh",
-//     "eigth"
-// ];
+var wordArray = [
+    "first",
+    "second",
+    "third",
+    "fourth",
+    "fifth",
+    "sixth",
+    "seventh",
+    "eigth"
+];
 
-// var wordPicked = Math.floor(Math.random() * wordArray.length);
-// console.log("wordArray[wordPicked] " + wordArray[wordPicked]);
+var wordPicked = Math.floor(Math.random() * wordArray.length);
+console.log("wordArray[wordPicked] = " + wordArray[wordPicked]);
 
 // // generate a random word...
-// function wordGen() {
+function wordInitialize() {
 //     // ...from array
 //     // var wordPicked = Math.floor(Math.random() * wordArray.length);
 //     // console.log("wordArray[wordPicked] " + wordArray[wordPicked]);
@@ -26,8 +26,10 @@
 //     // var hideWord = document.createElement("INPUT");
 //     wordPicked.setAttribute("type", "hidden");
 //     document.body.appendChild(wordPicked);
-//     document.getElementById("newWord").innerHTML = wordGen();
-// }
+    document.getElementById("word-to-guess").innerHTML = wordArray[wordPicked];
+}
+
+wordInitialize();
 
 // document.onkeyup = function (event) {
 //     // Determines which key was pressed.
