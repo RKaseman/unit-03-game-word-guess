@@ -1,6 +1,5 @@
 
-var hiddenWord;
-
+var hiddenWord = [];
 var wordArray = [
     "first",
     "second",
@@ -15,21 +14,18 @@ var wordArray = [
 var wordPicked = Math.floor(Math.random() * wordArray.length);
 console.log("wordArray[wordPicked] = " + wordArray[wordPicked]);
 
-// // generate a random word...
 function wordInitialize() {
-//     // ...from array
-//     // var wordPicked = Math.floor(Math.random() * wordArray.length);
-//     // console.log("wordArray[wordPicked] " + wordArray[wordPicked]);
-//     // output of wordGen function
-//     // return wordArray[wordPicked];
-//     // var hideWord = document.createTextNode("Hello World");
-//     // var hideWord = document.createElement("INPUT");
-//     wordPicked.setAttribute("type", "hidden");
-//     document.body.appendChild(wordPicked);
-    document.getElementById("word-to-guess").innerHTML = wordArray[wordPicked];
+    var wordToGuess = wordArray[wordPicked].split("");
+    console.log("wordToGuess = " + wordToGuess);
+    for (var i = 0; i < wordToGuess.length; i++) {
+        console.log("i = " + wordToGuess[i]);
+        hiddenWord.push(wordToGuess[i]);
+        document.getElementById("word-to-guess").innerHTML = hiddenWord;
+    }
 }
 
 wordInitialize();
+console.log("hiddenWord = " + hiddenWord);
 
 // document.onkeyup = function (event) {
 //     // Determines which key was pressed.

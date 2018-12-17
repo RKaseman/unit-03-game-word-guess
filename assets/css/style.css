@@ -1,0 +1,18 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    width: 32%;
+    text-align: center;
+    border: 1px solid green;
+    margin: 32px auto;
+}
+
+#anim-canvas {
+    width: 128px;
+    height: 152px;
+    border: 1px solid red;
+    margin: inherit;
+}
