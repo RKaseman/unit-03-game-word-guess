@@ -1,5 +1,5 @@
 
-var hiddenWord = [];
+var letters = [];
 var wordArray = [
     "first",
     "second",
@@ -15,17 +15,21 @@ var wordPicked = Math.floor(Math.random() * wordArray.length);
 console.log("wordArray[wordPicked] = " + wordArray[wordPicked]);
 
 function wordInitialize() {
-    var wordToGuess = wordArray[wordPicked].split("");
-    console.log("wordToGuess = " + wordToGuess);
-    for (var i = 0; i < wordToGuess.length; i++) {
-        console.log("i = " + wordToGuess[i]);
-        hiddenWord.push(wordToGuess[i]);
-        document.getElementById("word-to-guess").innerHTML = hiddenWord;
+
+    var lettersToGuess = wordArray[wordPicked].split("");
+    console.log("lettersToGuess = " + lettersToGuess);
+
+    for (var i = 0; i < lettersToGuess.length; i++) {
+        console.log("lettersToGuess[i] = " + lettersToGuess[i]);
+        letters.push(lettersToGuess[i]);
+        document.getElementById("word-to-guess").innerHTML = "<span>" + letters + "</span>";
     }
+
 }
 
 wordInitialize();
-console.log("hiddenWord = " + hiddenWord);
+
+console.log("letters = " + letters);
 
 // document.onkeyup = function (event) {
 //     // Determines which key was pressed.

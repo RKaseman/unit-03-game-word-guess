@@ -16,3 +16,8 @@ body {
     border: 1px solid red;
     margin: inherit;
 }
+
+span {
+    width: 32px;
+    background-color: yellow;
+}
