@@ -17,6 +17,12 @@ body {
     margin: inherit;
 }
 
+#word-to-guess, #message {
+    width: 128px;
+    border: 2px solid purple;
+    margin: inherit;
+}
+
 span {
     width: 32px;
     background-color: yellow;
