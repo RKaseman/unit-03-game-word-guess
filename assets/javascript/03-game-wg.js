@@ -32,10 +32,11 @@ document.onkeyup = function (event) {
     console.log("userGuess = " + userGuess);
     var inArray = letters.includes(userGuess);
     console.log("inArray = " + inArray);
-    // var result = wordGen().charAt(4);
-    // console.log(result);
     if (inArray === false) {
         document.getElementById("message").innerHTML = "That is not a letter in the word";
+    } else {
+        console.log("letters.indexOf(userGuess) = " + letters.indexOf(userGuess));
+        document.getElementById("message").innerHTML = "Good guess";
     }
 }
 

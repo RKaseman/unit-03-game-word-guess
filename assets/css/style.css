@@ -17,6 +17,10 @@ body {
     margin: inherit;
 }
 
+canvas {
+    width: inherit;
+}
+
 #word-to-guess, #message {
     width: 128px;
     border: 2px solid purple;
