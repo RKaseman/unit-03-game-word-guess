@@ -5,8 +5,20 @@ var sketchProc = function (processingInstance) {
         frameRate(30);
 
         draw = function () {
-            background(200, 200, 200);
+            background(216, 216, 216);
 
+            strokeWeight(16);
+            strokeCap(PROJECT);
+            stroke(100, 20, 20);
+            line(176, 100, 176, 200);
+            line(192, 100, 208, 100);
+            // arc(x, y, width, height, start, stop)
+            noFill();
+            strokeWeight(4);
+            stroke(0, 0, 192);
+            arc(100, 55, 50, 50, 0, 1);
+            arc(100, 55, 50, 50, 2, 3);
+            arc(100, 55, 50, 50, 4, 5);
             //sam's snowman body
             strokeWeight(1);
             stroke(10, 130, 180);
