@@ -11,14 +11,14 @@ body {
 }
 
 #anim-canvas {
-    width: 128px;
-    height: 152px;
+    width: 152px;
+    height: 192px;
     border: 1px solid red;
     margin: inherit;
 }
 
 canvas {
-    width: inherit;
+    width: 96%;
 }
 
 #word-to-guess, #message {
