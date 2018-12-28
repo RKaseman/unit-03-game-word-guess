@@ -19,6 +19,7 @@ body {
 
 canvas {
     width: 96%;
+    margin: 16px auto;
 }
 
 #word-to-guess, #message {
