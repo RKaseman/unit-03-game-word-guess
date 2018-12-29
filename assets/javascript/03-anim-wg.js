@@ -8,6 +8,9 @@ var sketchProc = function (processingInstance) {
             // canvas color
             background(216, 216, 216);
 
+            // for all line segment caps
+            strokeCap(SQUARE);
+
             // "H";
             strokeWeight(1);
             stroke(10, 130, 180);
@@ -26,18 +29,20 @@ var sketchProc = function (processingInstance) {
             arc(200, 200, 50, 50, 2, 3);
             arc(200, 200, 50, 50, 4, 5);
 
-            //sam's bow tie. quads - with twists
-            fill(75, 0, 155);
-            quad(182, 205, 182, 225, 217, 205, 217, 225);
-            fill(105, 0, 185);
-            quad(185, 205, 185, 225, 215, 205, 215, 225);
-            rectMode(CENTER);
-            rect(200, 215, 8, 6);
-            stroke(32, 32, 64);
-            line(196, 213, 196, 217);
-            line(204, 213, 204, 217);
+            stroke(0, 0, 192);
+            line(200, 216, 200, 232);
 
-            //sketch border
+            noFill();
+            smooth();
+            strokeWeight(10.0);
+            strokeJoin(BEVEL);
+            beginShape();
+            vertex(35, 20);
+            vertex(65, 50);
+            vertex(35, 80);
+            endShape();
+
+            // sketch border
             stroke(0, 128, 0);
             strokeWeight(2);
             line(1, 1, 399, 1);
