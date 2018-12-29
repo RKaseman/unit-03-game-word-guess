@@ -5,27 +5,26 @@ var sketchProc = function (processingInstance) {
         frameRate(30);
 
         draw = function () {
+            // canvas color
             background(216, 216, 216);
 
-            strokeWeight(16);
-            strokeCap(PROJECT);
-            stroke(100, 20, 20);
-            line(176, 100, 176, 200);
-            line(192, 100, 208, 100);
+            // "H";
+            strokeWeight(1);
+            stroke(10, 130, 180);
+            textAlign(CENTER, BASELINE);
+            textSize(384);
+            fill(64, 8, 8);
+            text("H", 208, 304);
+            fill(192, 0, 0);
+            text("H", 200, 296);
+
             // arc(x, y, width, height, start, stop)
             noFill();
             strokeWeight(4);
             stroke(0, 0, 192);
-            arc(100, 55, 50, 50, 0, 1);
-            arc(100, 55, 50, 50, 2, 3);
-            arc(100, 55, 50, 50, 4, 5);
-            //sam's snowman body
-            strokeWeight(1);
-            stroke(10, 130, 180);
-            fill(0, 0, 192);
-            ellipse(200, 246, 108, 108 - 10);
-            textAlign(CENTER, BASELINE);
-            text("text\nmay\ngo\nhere.", 200, 144);
+            arc(200, 200, 50, 50, 0, 1);
+            arc(200, 200, 50, 50, 2, 3);
+            arc(200, 200, 50, 50, 4, 5);
 
             //sam's bow tie. quads - with twists
             fill(75, 0, 155);
