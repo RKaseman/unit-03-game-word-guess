@@ -11,14 +11,14 @@ body {
 }
 
 #anim-canvas {
-    width: 152px;
-    height: 192px;
+    /* width: 152px; */
+    /* height: 192px; */
     border: 1px solid red;
     margin: inherit;
 }
 
 canvas {
-    width: 97%;
+    /* width: 97%; */
     /* border: 4px solid black; */
     margin: 16px auto;
 }

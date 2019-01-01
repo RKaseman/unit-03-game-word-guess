@@ -22,33 +22,46 @@ var sketchProc = function (processingInstance) {
             text("H", 200, 296);
 
             // arc(x, y, width, height, start, stop)
+            // head
             noFill();
             strokeWeight(4);
             stroke(0, 0, 192);
-            arc(200, 200, 50, 50, 0, 1);
-            arc(200, 200, 50, 50, 2, 3);
-            arc(200, 200, 50, 50, 4, 5);
+            arc(200, 200, 32, 40, -1, 2);
+            arc(200, 200, 32, 40, 2, 4);
+            arc(200, 200, 50, 40, 4, 5.1);
 
+            // body
             stroke(0, 0, 192);
-            line(200, 216, 200, 232);
+            line(200, 216, 200, 256);
 
-            noFill();
-            smooth();
-            strokeWeight(10.0);
-            strokeJoin(BEVEL);
-            beginShape();
-            vertex(35, 20);
-            vertex(65, 50);
-            vertex(35, 80);
-            endShape();
+            // left arm
+            line(200, 232, 184, 248);
+
+            // right arm
+            line(200, 232, 216, 248);
+
+            // left leg
+            line(200, 256, 184, 288);
+
+            // right leg
+            line(200, 256, 216, 288);
+
+            // eyes
+            strokeWeight(1);
+            line(192, 192, 198, 198);
+            line(192, 198, 198, 192);
+            translate(10, 0);
+            line(192, 192, 198, 198);
+            line(192, 198, 198, 192);
+            translate(-10, 0);
 
             // sketch border
-            stroke(0, 128, 0);
+            stroke(192, 0, 0);
             strokeWeight(2);
-            line(1, 1, 399, 1);
-            line(1, 399, 399, 399);
-            line(399, 1, 399, 399);
-            line(1, 1, 1, 399);
+            line(0, 0, 400, 0);
+            line(0, 400, 400, 400);
+            line(400, 0, 400, 400);
+            line(0, 0, 0, 400);
 
         }
     }
