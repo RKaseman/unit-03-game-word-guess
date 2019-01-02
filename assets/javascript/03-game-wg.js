@@ -13,13 +13,15 @@ var wordArray = [
 
 var wordPicked = Math.floor(Math.random() * wordArray.length);
 console.log("wordArray[wordPicked] = " + wordArray[wordPicked]);
+document.getElementById("game-state").innerHTML = 1;
+console.log("gameState (from game)= " + document.getElementById("game-state").innerHTML);
 
 function wordInitialize() {
     var lettersToGuess = wordArray[wordPicked].split("");
     console.log("lettersToGuess = " + lettersToGuess);
     for (var i = 0; i < lettersToGuess.length; i++) {
         letters.push(lettersToGuess[i]);
-        document.getElementById("word-to-guess").innerHTML = "<span>" + letters.join(" ") + "</span>";
+        document.getElementById("word-to-guess").innerHTML = "<span>" + letters.join("</span><span>") + "</span>";
     }
 }
 

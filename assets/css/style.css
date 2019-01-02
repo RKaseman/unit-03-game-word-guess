@@ -23,6 +23,11 @@ canvas {
     margin: 16px auto;
 }
 
+.flex-container {
+    display: flex;
+    justify-content: center;
+}
+
 #word-to-guess, #message {
     width: 128px;
     border: 2px solid purple;
@@ -32,4 +37,6 @@ canvas {
 span {
     width: 32px;
     background-color: yellow;
+    margin: 8px;
 }
+
