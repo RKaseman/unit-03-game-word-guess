@@ -1,5 +1,4 @@
 
-var letters = [];
 var wordArray = [
     "first",
     "second",
@@ -10,10 +9,12 @@ var wordArray = [
     "seventh",
     "eigth"
 ];
+var letters = [];
+var counter = 1;
 
 var wordPicked = Math.floor(Math.random() * wordArray.length);
 console.log("wordArray[wordPicked] = " + wordArray[wordPicked]);
-document.getElementById("game-state").innerHTML = 1;
+document.getElementById("game-state").innerHTML = counter;
 console.log("gameState (from game)= " + document.getElementById("game-state").innerHTML);
 
 function wordInitialize() {
@@ -35,6 +36,10 @@ document.onkeyup = function (event) {
     var inArray = letters.includes(userGuess);
     console.log("inArray = " + inArray);
     if (inArray === false) {
+        counter++;
+        console.log("counter++ = " + counter);
+        document.getElementById("game-state").innerHTML = counter;
+        console.log("gameState #2 (from game) = " + document.getElementById("game-state").innerHTML);
         document.getElementById("message").innerHTML = "That is not a letter in the word";
     } else {
         console.log("letters.indexOf(userGuess) = " + letters.indexOf(userGuess));

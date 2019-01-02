@@ -9,7 +9,6 @@ var sketchProc = function (processingInstance) {
 
         function drawHead() {
             // arc(x, y, width, height, start, stop)
-            // head
             noFill();
             strokeWeight(4);
             stroke(0, 0, 192);
@@ -19,33 +18,27 @@ var sketchProc = function (processingInstance) {
         }
 
         function drawBody() {
-            // body
             stroke(0, 0, 192);
             line(200, 216, 200, 256);
         }
 
         function drawLeftArm() {
-            // left arm
             line(200, 232, 184, 248);
         }
 
         function drawRightArm() {
-            // right arm
             line(200, 232, 216, 248);
         }
 
         function drawLeftLeg() {
-            // left leg
             line(200, 256, 184, 288);
         }
 
         function drawRightLeg() {
-            // right leg
             line(200, 256, 216, 288);
         }
 
         function drawEyes() {
-            // eyes
             strokeWeight(1);
             line(192, 192, 198, 198);
             line(192, 198, 198, 192);
@@ -63,14 +56,12 @@ var sketchProc = function (processingInstance) {
             strokeCap(SQUARE);
 
             // "H";
-            strokeWeight(1);
-            stroke(10, 130, 180);
             textAlign(CENTER, BASELINE);
             textSize(384);
             fill(64, 8, 8);
             text("H", 208, 304);
             fill(192, 0, 0);
-            text("H", 200, 296);
+            text("H", 192, 288);
 
             if (gameState == 1) {
                 drawHead();
