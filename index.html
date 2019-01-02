@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hedonometer Hangman</title>
     <!-- css reset -->
-    <link rel="stylesheet" type="text/css" href="assets/css/EMreset.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/EMreset.css">
     <!-- google fonts -->
     <link href="https://fonts.googleapis.com/css?family=Carter+One%7cFreckle+Face%7c" rel="stylesheet">
     <!-- custom style -->
@@ -29,10 +29,13 @@
     <div id="message">
         <p></p>
     </div>
+    <div>
+        <p id="game-state">3</p>
+    </div>
 
     <script src="./assets/javascript/processing-1.4.8.min.js"></script>
-    <script src="assets/javascript/03-game-wg.js"></script>
-    <script src="assets/javascript/03-anim-wg.js"></script>
+    <script src="./assets/javascript/03-game-wg.js"></script>
+    <script src="./assets/javascript/03-anim-wg.js"></script>
     <script>
         var canvas = document.getElementById("the-canvas");
         var processingInstance = new Processing(canvas, sketchProc);

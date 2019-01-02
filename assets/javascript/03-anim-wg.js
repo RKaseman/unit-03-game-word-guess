@@ -4,6 +4,31 @@ var sketchProc = function (processingInstance) {
         size(400, 400);
         frameRate(30);
 
+        var gameState = document.getElementById("game-state").innerHTML
+        console.log("gameState = " + gameState);
+
+        function drawHead() {
+            // arc(x, y, width, height, start, stop)
+            // head
+            noFill();
+            strokeWeight(4);
+            stroke(0, 0, 192);
+            arc(200, 200, 32, 40, -1, 2);
+            arc(200, 200, 32, 40, 2, 4);
+            arc(200, 200, 50, 40, 4, 5.1);
+        }
+
+        function drawBody() {
+            // body
+            stroke(0, 0, 192);
+            line(200, 216, 200, 256);
+        }
+
+        function drawLeftArm() {
+            // left arm
+            line(200, 232, 184, 248);
+        }
+
         draw = function () {
             // canvas color
             background(216, 216, 216);
@@ -21,39 +46,31 @@ var sketchProc = function (processingInstance) {
             fill(192, 0, 0);
             text("H", 200, 296);
 
-            // arc(x, y, width, height, start, stop)
-            // head
-            noFill();
-            strokeWeight(4);
-            stroke(0, 0, 192);
-            arc(200, 200, 32, 40, -1, 2);
-            arc(200, 200, 32, 40, 2, 4);
-            arc(200, 200, 50, 40, 4, 5.1);
-
-            // body
-            stroke(0, 0, 192);
-            line(200, 216, 200, 256);
-
-            // left arm
-            line(200, 232, 184, 248);
+            if (gameState == 2) {
+                drawHead();
+            }
+            if (gameState == 3) {
+                drawHead();
+                drawBody();
+            }
 
             // right arm
-            line(200, 232, 216, 248);
+            // line(200, 232, 216, 248);
 
             // left leg
-            line(200, 256, 184, 288);
+            // line(200, 256, 184, 288);
 
             // right leg
-            line(200, 256, 216, 288);
+            // line(200, 256, 216, 288);
 
             // eyes
-            strokeWeight(1);
-            line(192, 192, 198, 198);
-            line(192, 198, 198, 192);
-            translate(10, 0);
-            line(192, 192, 198, 198);
-            line(192, 198, 198, 192);
-            translate(-10, 0);
+            // strokeWeight(1);
+            // line(192, 192, 198, 198);
+            // line(192, 198, 198, 192);
+            // translate(10, 0);
+            // line(192, 192, 198, 198);
+            // line(192, 198, 198, 192);
+            // translate(-10, 0);
 
             // sketch border
             stroke(192, 0, 0);
