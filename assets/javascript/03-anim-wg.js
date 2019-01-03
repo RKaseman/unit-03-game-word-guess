@@ -4,8 +4,8 @@ var sketchProc = function (processingInstance) {
         size(400, 400);
         frameRate(30);
 
-        var gameState = document.getElementById("game-state").innerHTML
-        console.log("gameState (from anim)= " + gameState);
+        // var gameState = document.getElementById("game-state").innerHTML
+        // console.log("gameState (from anim)= " + gameState);
 
         function drawHead() {
             // arc(x, y, width, height, start, stop)
@@ -63,6 +63,7 @@ var sketchProc = function (processingInstance) {
             fill(192, 0, 0);
             text("H", 192, 288);
 
+            var gameState = document.getElementById("game-state").innerHTML
             if (gameState == 1) {
                 drawHead();
             }
