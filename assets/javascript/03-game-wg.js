@@ -15,7 +15,7 @@ var counter = 0;
 var wordPicked = Math.floor(Math.random() * wordArray.length);
 console.log("wordArray[wordPicked] = " + wordArray[wordPicked]);
 document.getElementById("game-state").innerHTML = counter;
-console.log("gameState (from game)= " + document.getElementById("game-state").innerHTML);
+console.log("gameState = " + document.getElementById("game-state").innerHTML);
 
 function wordInitialize() {
     var lettersToGuess = wordArray[wordPicked].split("");
@@ -37,10 +37,10 @@ document.onkeyup = function (event) {
     console.log("inArray = " + inArray);
     if (inArray === false) {
         counter++;
-        // console.log("counter++ = " + counter);
+        console.log("counter++ = " + counter);
         document.getElementById("game-state").innerHTML = counter;
-        // console.log("gameState #2 (from game) = " + document.getElementById("game-state").innerHTML);
-        document.getElementById("message").innerHTML = "That is not a letter in the word";
+        console.log("gameState updated = " + document.getElementById("game-state").innerHTML);
+        document.getElementById("message").innerHTML = "<span>That is not a letter in the word</span>";
     } else {
         console.log("letters.indexOf(userGuess) = " + letters.indexOf(userGuess));
         document.getElementById("message").innerHTML = "Good guess";

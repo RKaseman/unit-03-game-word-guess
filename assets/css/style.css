@@ -15,7 +15,7 @@ body {
     margin: 32px auto;
 }
 
-#anim-canvas {
+#canvas-container {
     /* width: 152px; */
     /* height: 192px; */
     /* position: relative; */
@@ -35,23 +35,27 @@ canvas {
 }
 
 #word-to-guess, #message {
-    width: 128px;
+    width: 64%;
     border: 2px solid purple;
     margin: inherit;
 }
 
-/* #message { */
+#message {
     /* position: absolute; */
     /* top: 320px; */
     /* left: 314px; */
-    /* height: 196px; */
-/* } */
+    height: 36px;
+}
 
 span {
     /* visibility: hidden; */
     /* visibility: visible; */
-    width: 32px;
+    min-width: 32px;
     background-color: yellow;
     margin: 8px;
+}
+
+#game-state {
+    visibility: hidden;
 }
 
