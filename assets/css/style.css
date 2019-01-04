@@ -3,8 +3,13 @@
     box-sizing: border-box;
 }
 
+html {
+    background-color: #1f0000;
+}
+
 body {
-    width: 32%;
+    background-color: #dddddd;
+    width: 48%;
     text-align: center;
     border: 1px solid green;
     margin: 32px auto;
@@ -13,6 +18,7 @@ body {
 #anim-canvas {
     /* width: 152px; */
     /* height: 192px; */
+    /* position: relative; */
     border: 1px solid red;
     margin: inherit;
 }
@@ -20,7 +26,7 @@ body {
 canvas {
     /* width: 97%; */
     /* border: 4px solid black; */
-    margin: 16px auto;
+    margin: inherit;
 }
 
 .flex-container {
@@ -34,7 +40,16 @@ canvas {
     margin: inherit;
 }
 
+/* #message { */
+    /* position: absolute; */
+    /* top: 320px; */
+    /* left: 314px; */
+    /* height: 196px; */
+/* } */
+
 span {
+    /* visibility: hidden; */
+    /* visibility: visible; */
     width: 32px;
     background-color: yellow;
     margin: 8px;
