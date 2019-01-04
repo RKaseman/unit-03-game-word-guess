@@ -42,7 +42,8 @@ document.onkeyup = function (event) {
         console.log("gameState updated = " + document.getElementById("game-state").innerHTML);
         document.getElementById("message").innerHTML = "<span>That is not a letter in the word</span>";
     } else {
-        console.log("letters.indexOf(userGuess) = " + letters.indexOf(userGuess));
+        var testIndex = letters.indexOf(userGuess);
+        console.log("testIndex = " + testIndex);
         document.getElementById("message").innerHTML = "<span>Good guess</span>";
     }
 }
