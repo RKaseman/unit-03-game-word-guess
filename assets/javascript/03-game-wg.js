@@ -43,7 +43,7 @@ document.onkeyup = function (event) {
         document.getElementById("message").innerHTML = "<span>That is not a letter in the word</span>";
     } else {
         console.log("letters.indexOf(userGuess) = " + letters.indexOf(userGuess));
-        document.getElementById("message").innerHTML = "Good guess";
+        document.getElementById("message").innerHTML = "<span>Good guess</span>";
     }
 }
 
