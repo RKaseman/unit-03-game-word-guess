@@ -45,6 +45,7 @@ document.onkeyup = function (event) {
         var testIndex = letters.indexOf(userGuess);
         console.log("testIndex = " + testIndex);
         document.getElementById("message").innerHTML = "<span>Good guess</span>";
+        console.log("span [index] = " + document.getElementsByTagName("span")[testIndex].innerHTML);
     }
 }
 

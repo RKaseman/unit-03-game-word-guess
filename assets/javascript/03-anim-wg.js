@@ -55,8 +55,10 @@ var sketchProc = function (processingInstance) {
             // "H";
             textAlign(CENTER, BASELINE);
             textSize(384);
+            // shadow
             fill(64, 8, 8);
             text("H", 208, 304);
+            // foreground
             fill(192, 0, 0);
             text("H", 192, 288);
 
