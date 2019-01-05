@@ -41,6 +41,7 @@ document.onkeyup = function (event) {
         document.getElementById("game-state").innerHTML = counter;
         console.log("gameState updated = " + document.getElementById("game-state").innerHTML);
         document.getElementById("message").innerHTML = "<span>That is not a letter in the word</span>";
+        document.getElementById("message").style.backgroundColor = "#400808";
     } else {
         var testIndex = letters.indexOf(userGuess);
         console.log("testIndex = " + testIndex);

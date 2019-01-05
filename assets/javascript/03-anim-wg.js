@@ -9,39 +9,39 @@ var sketchProc = function (processingInstance) {
             noFill();
             strokeWeight(4);
             stroke(0, 0, 192);
-            arc(200, 200, 32, 40, -1, 2);
-            arc(200, 200, 32, 40, 2, 4);
-            arc(200, 200, 56, 36, 3.7, 5.1);
+            arc(200, 240, 32, 40, -1, 2);
+            arc(200, 240, 32, 40, 2, 4);
+            arc(200, 240, 56, 36, 3.7, 5.1);
         }
 
         function drawBody() {
             stroke(0, 0, 192);
-            line(200, 216, 200, 256);
+            line(200, 256, 200, 296);
         }
 
         function drawLeftArm() {
-            line(200, 232, 184, 248);
+            line(200, 272, 184, 288);
         }
 
         function drawRightArm() {
-            line(200, 232, 216, 248);
+            line(200, 272, 216, 288);
         }
 
         function drawLeftLeg() {
-            line(200, 256, 184, 288);
+            line(200, 296, 184, 328);
         }
 
         function drawRightLeg() {
-            line(200, 256, 216, 288);
+            line(200, 296, 216, 328);
         }
 
         function drawEyes() {
             strokeWeight(1);
-            line(192, 192, 198, 198);
-            line(192, 198, 198, 192);
+            line(192, 232, 198, 238);
+            line(192, 238, 198, 232);
             translate(10, 0);
-            line(192, 192, 198, 198);
-            line(192, 198, 198, 192);
+            line(192, 232, 198, 238);
+            line(192, 238, 198, 232);
             translate(-10, 0);
         }
 
@@ -53,14 +53,14 @@ var sketchProc = function (processingInstance) {
             strokeCap(SQUARE);
 
             // "H";
-            textAlign(CENTER, BASELINE);
+            textAlign(CENTER, CENTER);
             textSize(384);
             // shadow
             fill(64, 8, 8);
-            text("H", 208, 304);
+            text("H", 208, 208);
             // foreground
             fill(192, 0, 0);
-            text("H", 192, 288);
+            text("H", 192, 192);
 
             var gameState = document.getElementById("game-state").innerHTML
             if (gameState == 1) {
@@ -112,12 +112,18 @@ var sketchProc = function (processingInstance) {
             }
 
             // sketch border
+            strokeWeight(8);
+            // top
             stroke(192, 0, 0);
-            strokeWeight(2);
             line(0, 0, 400, 0);
+            // right
+            stroke(64, 8, 8);
+            line(398, 0, 398, 400);
+            // bottom
             line(0, 400, 400, 400);
-            line(400, 0, 400, 400);
-            line(0, 0, 0, 400);
+            // left
+            stroke(192, 0, 0);
+            line(2, 0, 2, 400);
 
         }
     }

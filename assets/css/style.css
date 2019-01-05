@@ -19,7 +19,7 @@ body {
     /* width: 152px; */
     /* height: 192px; */
     /* position: relative; */
-    border: 1px solid red;
+    /* border: 1px solid red; */
     margin: inherit;
 }
 
@@ -36,16 +36,16 @@ canvas {
 
 #word-to-guess, #message {
     width: 64%;
-    border: 2px solid purple;
+    border: 4px solid #400808;
     margin: inherit;
 }
 
-#message {
+/* #message { */
     /* position: absolute; */
     /* top: 320px; */
     /* left: 314px; */
-    height: 36px;
-}
+    /* height: 36px; */
+/* } */
 
 span {
     /* visibility: hidden; */
