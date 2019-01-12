@@ -4,6 +4,7 @@
 }
 
 html {
+    font-family: "East Sea Dokdo", cursive;
     background-color: #1f0000;
 }
 
@@ -12,7 +13,13 @@ body {
     width: 48%;
     text-align: center;
     border: 1px solid green;
-    margin: 32px auto;
+    margin: auto;
+    margin-bottom: 24px;
+}
+
+h1 {
+    font-size: 5em;
+    line-height: 96px;
 }
 
 #canvas-container {
@@ -35,6 +42,7 @@ canvas {
 }
 
 #word-to-guess, #message {
+    font-family: "Sriracha", cursive;
     width: 64%;
     border: 4px solid #400808;
     margin: inherit;
@@ -48,8 +56,7 @@ canvas {
 /* } */
 
 span {
-    /* visibility: hidden; */
-    /* visibility: visible; */
+    visibility: hidden;
     min-width: 32px;
     background-color: yellow;
     margin: 8px;

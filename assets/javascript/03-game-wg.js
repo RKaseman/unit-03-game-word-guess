@@ -20,6 +20,7 @@ console.log("gameState = " + document.getElementById("game-state").innerHTML);
 function wordInitialize() {
     var lettersToGuess = wordArray[wordPicked].split("");
     console.log("lettersToGuess = " + lettersToGuess);
+    var i;
     for (var i = 0; i < lettersToGuess.length; i++) {
         letters.push(lettersToGuess[i]);
         document.getElementById("word-to-guess").innerHTML = "<span>" + letters.join("</span><span>") + "</span>";
@@ -43,10 +44,11 @@ document.onkeyup = function (event) {
         document.getElementById("message").innerHTML = "<span>That is not a letter in the word</span>";
         document.getElementById("message").style.backgroundColor = "#400808";
     } else {
-        var testIndex = letters.indexOf(userGuess);
-        console.log("testIndex = " + testIndex);
+        var matchIndex = letters.indexOf(userGuess);
+        console.log("matchIndex = " + matchIndex);
         document.getElementById("message").innerHTML = "<span>Good guess</span>";
-        console.log("span [index] = " + document.getElementsByTagName("span")[testIndex].innerHTML);
+        console.log("span [matchIndex] = " + document.getElementsByTagName("span")[matchIndex].innerHTML);
+        document.getElementsByTagName("span")[matchIndex].style.visibility = "visible";
     }
 }
 
