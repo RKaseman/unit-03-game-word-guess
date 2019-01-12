@@ -4,6 +4,7 @@ var sketchProc = function (processingInstance) {
         size(400, 400);
         frameRate(30);
 
+        // draw the stickman
         function drawHead() {
             // arc(x, y, width, height, start, stop)
             noFill();
@@ -56,10 +57,10 @@ var sketchProc = function (processingInstance) {
             textAlign(CENTER, CENTER);
             textSize(384);
             // shadow
-            fill(64, 8, 8);
+            fill(72, 0, 72);
             text("H", 208, 208);
             // foreground
-            fill(192, 0, 0);
+            fill(184, 0, 0);
             text("H", 192, 192);
 
             var gameState = document.getElementById("game-state").innerHTML
@@ -114,15 +115,15 @@ var sketchProc = function (processingInstance) {
             // sketch border
             strokeWeight(8);
             // top
-            stroke(192, 0, 0);
+            stroke(184, 0, 0);
             line(0, 0, 400, 0);
             // right
-            stroke(64, 8, 8);
+            stroke(72, 0, 72);
             line(398, 0, 398, 400);
             // bottom
             line(0, 400, 400, 400);
             // left
-            stroke(192, 0, 0);
+            stroke(184, 0, 0);
             line(2, 0, 2, 400);
 
         }

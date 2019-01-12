@@ -41,12 +41,12 @@ document.onkeyup = function (event) {
         console.log("counter++ = " + counter);
         document.getElementById("game-state").innerHTML = counter;
         console.log("gameState updated = " + document.getElementById("game-state").innerHTML);
-        document.getElementById("message").innerHTML = "<span>That is not a letter in the word</span>";
-        document.getElementById("message").style.backgroundColor = "#400808";
+        document.getElementById("message").innerHTML = "That is not a letter in the word";
+        // document.getElementById("message").style.backgroundColor = "#400808";
     } else {
         var matchIndex = letters.indexOf(userGuess);
         console.log("matchIndex = " + matchIndex);
-        document.getElementById("message").innerHTML = "<span>Good guess</span>";
+        document.getElementById("message").innerHTML = "Good guess";
         console.log("span [matchIndex] = " + document.getElementsByTagName("span")[matchIndex].innerHTML);
         document.getElementsByTagName("span")[matchIndex].style.visibility = "visible";
     }

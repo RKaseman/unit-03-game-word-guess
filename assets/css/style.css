@@ -5,7 +5,7 @@
 
 html {
     font-family: "East Sea Dokdo", cursive;
-    background-color: #1f0000;
+    background-color: rgb(48, 0, 48);
 }
 
 body {
@@ -23,16 +23,10 @@ h1 {
 }
 
 #canvas-container {
-    /* width: 152px; */
-    /* height: 192px; */
-    /* position: relative; */
-    /* border: 1px solid red; */
     margin: inherit;
 }
 
 canvas {
-    /* width: 97%; */
-    /* border: 4px solid black; */
     margin: inherit;
 }
 
@@ -43,22 +37,24 @@ canvas {
 
 #word-to-guess, #message {
     font-family: "Sriracha", cursive;
-    width: 64%;
-    border: 4px solid #400808;
+    width: 96%;
+    border: 4px solid rgb(72, 0, 72);
     margin: inherit;
 }
 
-/* #message { */
-    /* position: absolute; */
-    /* top: 320px; */
+#message {
+    /* position: relative; */
+    /* top: 32px; */
     /* left: 314px; */
-    /* height: 36px; */
-/* } */
+    /* min-width: 32%; */
+    height: 36px;
+    padding: 8px 0;
+}
 
 span {
-    visibility: hidden;
-    min-width: 32px;
-    background-color: yellow;
+    /* visibility: hidden; */
+    min-width: 16px;
+    background-color: rgb(96, 96, 232);
     margin: 8px;
 }
 
