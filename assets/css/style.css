@@ -9,7 +9,7 @@ html {
 }
 
 body {
-    --letter-block-width: 32px;
+    --letter-block-width: 40px;
     background-color: #dddddd;
     width: 48%;
     text-align: center;
@@ -37,17 +37,12 @@ canvas {
 }
 
 #word-to-guess, #message {
-    font-family: "Sriracha", cursive;
+    font-family: "Finger Paint", cursive;
     width: 96%;
-    border: 4px solid rgb(72, 0, 72);
     margin: inherit;
 }
 
 #message {
-    /* position: relative; */
-    /* top: 32px; */
-    /* left: 314px; */
-    /* min-width: 32%; */
     height: 36px;
     padding: 8px 0;
 }
@@ -57,19 +52,18 @@ span, hr {
 }
 
 span {
-    /* visibility: hidden; */
+    visibility: hidden;
     position: relative;
     font-size: 3.5em;
-    background-color: rgb(96, 96, 232);
     margin: 8px;
 }
 
 hr {
     visibility: visible;
     position: absolute;
-    top: 64%;
-    height: 2px;
-    border-color: green;
+    top: 32px;
+    height: 4px;
+    background-color: rgb(72, 0, 72);
 }
 
 #game-state {
