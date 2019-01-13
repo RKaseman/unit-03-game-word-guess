@@ -9,10 +9,11 @@ html {
 }
 
 body {
+    --letter-block-width: 32px;
     background-color: #dddddd;
     width: 48%;
     text-align: center;
-    border: 1px solid green;
+    border: 4px solid green;
     margin: auto;
     margin-bottom: 24px;
 }
@@ -51,11 +52,24 @@ canvas {
     padding: 8px 0;
 }
 
+span, hr {
+    width: var(--letter-block-width);
+}
+
 span {
     /* visibility: hidden; */
-    min-width: 16px;
+    position: relative;
+    font-size: 3.5em;
     background-color: rgb(96, 96, 232);
     margin: 8px;
+}
+
+hr {
+    visibility: visible;
+    position: absolute;
+    top: 64%;
+    height: 2px;
+    border-color: green;
 }
 
 #game-state {

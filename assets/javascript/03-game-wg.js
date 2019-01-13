@@ -15,7 +15,6 @@ var counter = 0;
 var wordPicked = Math.floor(Math.random() * wordArray.length);
 console.log("wordArray[wordPicked] = " + wordArray[wordPicked]);
 document.getElementById("game-state").innerHTML = counter;
-console.log("gameState = " + document.getElementById("game-state").innerHTML);
 
 function wordInitialize() {
     var lettersToGuess = wordArray[wordPicked].split("");
@@ -23,7 +22,7 @@ function wordInitialize() {
     var i;
     for (var i = 0; i < lettersToGuess.length; i++) {
         letters.push(lettersToGuess[i]);
-        document.getElementById("word-to-guess").innerHTML = "<span>" + letters.join("</span><span>") + "</span>";
+        document.getElementById("word-to-guess").innerHTML = "<span>" + letters.join("<hr></span><span>") + "<hr></span>";
     }
 }
 
@@ -35,12 +34,9 @@ document.onkeyup = function (event) {
     var userGuess = event.key;
     console.log("userGuess = " + userGuess);
     var inArray = letters.includes(userGuess);
-    console.log("inArray = " + inArray);
     if (inArray === false) {
         counter++;
-        console.log("counter++ = " + counter);
         document.getElementById("game-state").innerHTML = counter;
-        console.log("gameState updated = " + document.getElementById("game-state").innerHTML);
         document.getElementById("message").innerHTML = "That is not a letter in the word";
         // document.getElementById("message").style.backgroundColor = "#400808";
     } else {

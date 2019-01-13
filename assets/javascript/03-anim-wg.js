@@ -16,7 +16,6 @@ var sketchProc = function (processingInstance) {
         }
 
         function drawBody() {
-            stroke(0, 0, 192);
             line(200, 256, 200, 296);
         }
 
