@@ -60,7 +60,7 @@ span {
 
 hr {
     visibility: visible;
-    position: absolute;
+    /* position: absolute; */
     top: 32px;
     height: 4px;
     background-color: rgb(72, 0, 72);
