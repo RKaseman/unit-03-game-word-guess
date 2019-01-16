@@ -5,49 +5,52 @@ var sketchProc = function (processingInstance) {
         // frameRate(30);
         frameRate(4);
 
+        var stickmanY = 128;
+
         function muteBkgd() {
+            noStroke();
             fill(0, 0, 0, 192);
-            rect(0, 0, 400, 400);
+            rect(8, 8, 384, 384);
         }
 
-        // draw the stickman
+        // draw the stickman in stages
         function drawHead() {
             // arc(x, y, width, height, start, stop)
             noFill();
             strokeWeight(4);
             stroke(0, 0, 192);
-            arc(200, 240, 32, 40, -1, 2);
-            arc(200, 240, 32, 40, 2, 4);
-            arc(200, 240, 56, 36, 3.7, 5.1);
+            arc(200, stickmanY, 32, 40, -1, 2);
+            arc(200, stickmanY, 32, 40, 2, 4);
+            arc(200, stickmanY, 56, 36, 3.7, 5.1);
         }
 
         function drawBody() {
-            line(200, 256, 200, 296);
+            line(200, stickmanY + 16, 200, stickmanY + 56);
         }
 
         function drawLeftArm() {
-            line(200, 272, 184, 288);
+            line(200, stickmanY + 32, 184, stickmanY + 48);
         }
 
         function drawRightArm() {
-            line(200, 272, 216, 288);
+            line(200, stickmanY + 32, 216, stickmanY + 48);
         }
 
         function drawLeftLeg() {
-            line(200, 296, 184, 328);
+            line(200, stickmanY + 56, 184, stickmanY + 88);
         }
 
         function drawRightLeg() {
-            line(200, 296, 216, 328);
+            line(200, stickmanY + 56, 216, stickmanY + 88);
         }
 
         function drawEyes() {
             strokeWeight(1);
-            line(192, 232, 198, 238);
-            line(192, 238, 198, 232);
+            line(192, stickmanY - 8, 198, stickmanY - 2);
+            line(192, stickmanY - 2, 198, stickmanY - 8);
             translate(10, 0);
-            line(192, 232, 198, 238);
-            line(192, 238, 198, 232);
+            line(192, stickmanY - 8, 198, stickmanY - 2);
+            line(192, stickmanY - 2, 198, stickmanY - 8);
             translate(-10, 0);
         }
 
@@ -64,9 +67,16 @@ var sketchProc = function (processingInstance) {
             // shadow
             fill(72, 0, 72);
             text("H", 208, 208);
+            
             // foreground
             fill(184, 0, 0);
             text("H", 192, 192);
+
+            // corners
+            strokeWeight(16);
+            stroke(0, 0, 0);
+            line(64, 0, 0, 64);
+            line(336, 0, 400, 64);
 
             var gameState = document.getElementById("game-state").innerHTML
             if (gameState == 1) {
@@ -74,17 +84,20 @@ var sketchProc = function (processingInstance) {
                 drawHead();
             }
             if (gameState == 2) {
+                muteBkgd();
                 drawHead();
                 drawBody();
             }
 
             if (gameState == 3) {
+                muteBkgd();
                 drawHead();
                 drawBody();
                 drawLeftArm();
             }
 
             if (gameState == 4) {
+                muteBkgd();
                 drawHead();
                 drawBody();
                 drawLeftArm();
@@ -92,6 +105,7 @@ var sketchProc = function (processingInstance) {
             }
 
             if (gameState == 5) {
+                muteBkgd();
                 drawHead();
                 drawBody();
                 drawLeftArm();
@@ -100,6 +114,7 @@ var sketchProc = function (processingInstance) {
             }
 
             if (gameState == 6) {
+                muteBkgd();
                 drawHead();
                 drawBody();
                 drawLeftArm();
@@ -109,6 +124,7 @@ var sketchProc = function (processingInstance) {
             }
 
             if (gameState == 7) {
+                muteBkgd();
                 drawHead();
                 drawBody();
                 drawLeftArm();

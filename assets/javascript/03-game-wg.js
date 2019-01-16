@@ -20,7 +20,6 @@ document.getElementById("game-state").innerHTML = counter;
 
 function wordInitialize() {
     var lettersToGuess = wordArray[wordPicked].split("");
-    // console.log("lettersToGuess = " + lettersToGuess);
     for (var i = 0; i < lettersToGuess.length; i++) {
         letters.push(lettersToGuess[i]);
         document.getElementById("word-to-guess").innerHTML = "<span>" + letters.join("<hr></span><span>") + "<hr></span>";
@@ -31,9 +30,15 @@ wordInitialize();
 
 console.log("letters = " + letters);
 
-document.onkeyup = function (event) {
+document.onkeydown = function (event) {
+    console.log("cancelable? = " + event.cancelable + " " + event.keyCode);
+    if (event.keyCode === 116) {
+        event.preventDefault();
+        console.log("F5 pressed");
+        return;
+    }
     var userGuess = event.key;
-    // console.log("userGuess = " + userGuess);
+    console.log("userGuess = " + userGuess);
     var inGuessedArray = guessed.includes(userGuess);
     console.log("inGuessedArray = " + inGuessedArray);
     if (inGuessedArray) {
