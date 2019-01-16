@@ -10,6 +10,7 @@ var wordArray = [
     // "eigth"
 ];
 var letters = [];
+var guessed = [];
 var counter = 0;
 var matchIndex;
 
@@ -33,8 +34,16 @@ console.log("letters = " + letters);
 document.onkeyup = function (event) {
     var userGuess = event.key;
     // console.log("userGuess = " + userGuess);
-    var inArray = letters.includes(userGuess);
-    if (inArray) {
+    var inGuessedArray = guessed.includes(userGuess);
+    console.log("inGuessedArray = " + inGuessedArray);
+    if (inGuessedArray) {
+        document.getElementById("message").innerHTML = "That letter was already guessed";
+        return;
+    }
+    var inLettersArray = letters.includes(userGuess);
+    guessed.push(userGuess);
+    console.log("guessed = " + guessed);
+    if (inLettersArray) {
         matchIndex = letters.indexOf(userGuess);
         // console.log("matchIndex = " + matchIndex);
         document.getElementsByTagName("span")[matchIndex].style.visibility = "visible";

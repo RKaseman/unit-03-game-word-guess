@@ -2,7 +2,13 @@
 var sketchProc = function (processingInstance) {
     with (processingInstance) {
         size(400, 400);
-        frameRate(30);
+        // frameRate(30);
+        frameRate(4);
+
+        function muteBkgd() {
+            fill(0, 0, 0, 192);
+            rect(0, 0, 400, 400);
+        }
 
         // draw the stickman
         function drawHead() {
@@ -64,6 +70,7 @@ var sketchProc = function (processingInstance) {
 
             var gameState = document.getElementById("game-state").innerHTML
             if (gameState == 1) {
+                muteBkgd();
                 drawHead();
             }
             if (gameState == 2) {
