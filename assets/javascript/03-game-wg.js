@@ -1,16 +1,17 @@
 
 var wordArray = [
-    "first",
-    "second",
-    "third",
-    "fourth",
+    // "first",
+    // "second",
+    // "third",
+    // "fourth",
     "fifth",
-    "sixth",
+    // "sixth",
     "seventh",
-    "eigth"
+    // "eigth"
 ];
 var letters = [];
 var counter = 0;
+var matchIndex;
 
 var wordPicked = Math.floor(Math.random() * wordArray.length);
 console.log("wordArray[wordPicked] = " + wordArray[wordPicked]);
@@ -22,7 +23,8 @@ function wordInitialize() {
     var i;
     for (var i = 0; i < lettersToGuess.length; i++) {
         letters.push(lettersToGuess[i]);
-        document.getElementById("word-to-guess").innerHTML = "<span>" + letters.join("<hr></span><span>") + "<hr></span>";
+        document.getElementById("word-to-guess").innerHTML = "<span>" + letters.join("</span><hr><span>") + "</span><hr>";
+        // document.getElementsByTagName("span").innerHTML = "<hr>";
     }
 }
 
@@ -34,17 +36,25 @@ document.onkeyup = function (event) {
     var userGuess = event.key;
     console.log("userGuess = " + userGuess);
     var inArray = letters.includes(userGuess);
-    if (inArray === false) {
+    if (inArray) {
+        matchIndex = letters.indexOf(userGuess);
+        console.log("matchIndex = " + matchIndex);
+        document.getElementsByTagName("span")[matchIndex].style.visibility = "visible";
+        document.getElementById("message").innerHTML = "Good guess";
+        // var j;
+        for (var j = matchIndex + 1; j < letters.length; j++) {
+            matchIndex++;
+            console.log("matchIndex = " + matchIndex);
+            console.log("span .innerHTML = " + document.getElementsByTagName("span")[matchIndex].innerHTML);
+            if (userGuess === document.getElementsByTagName("span")[matchIndex].innerHTML) {
+                console.log("span .innerHTML = " + document.getElementsByTagName("span")[matchIndex].innerHTML);
+                document.getElementsByTagName("span")[matchIndex].style.visibility = "visible";
+            }
+        }
+    } else {
         counter++;
         document.getElementById("game-state").innerHTML = counter;
         document.getElementById("message").innerHTML = "That is not a letter in the word";
-        // document.getElementById("message").style.backgroundColor = "#400808";
-    } else {
-        var matchIndex = letters.indexOf(userGuess);
-        console.log("matchIndex = " + matchIndex);
-        document.getElementById("message").innerHTML = "Good guess";
-        console.log("span [matchIndex] = " + document.getElementsByTagName("span")[matchIndex].innerHTML);
-        document.getElementsByTagName("span")[matchIndex].style.visibility = "visible";
     }
 }
 
