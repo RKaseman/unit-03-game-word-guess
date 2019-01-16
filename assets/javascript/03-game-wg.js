@@ -24,7 +24,6 @@ function wordInitialize() {
     for (var i = 0; i < lettersToGuess.length; i++) {
         letters.push(lettersToGuess[i]);
         document.getElementById("word-to-guess").innerHTML = "<span>" + letters.join("</span><hr><span>") + "</span><hr>";
-        // document.getElementsByTagName("span").innerHTML = "<hr>";
     }
 }
 
@@ -57,21 +56,4 @@ document.onkeyup = function (event) {
         document.getElementById("message").innerHTML = "That is not a letter in the word";
     }
 }
-
-// // function myFunction() {
-// //     var str = "HELLO WORLD";
-// //     var res = wordGen().charAt(4)
-// //     document.getElementById("demo").innerHTML = res;
-// // }
-
-// // if (letterGuess === wordGen().charAt(4)) {
-// //     document.getElementById("newWord").innerHTML = res;
-// // }
-
-// // function startHidden() {
-// //     var hideWord = document.createElement("INPUT");
-// //     hideWord.setAttribute("type", "hidden");
-// //     document.body.appendChild(hideWord);
-// //     document.getElementById("newWord").innerHTML = wordGen();
-// // }
 
