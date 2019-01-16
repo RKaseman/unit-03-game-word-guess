@@ -17,8 +17,9 @@
 #
 ### Nice-to-haves added
 #
-- [x] F5 Key disabled
 - [ ] The (what the hell is a) [HEDONOMETER](http://hedonometer.org/about.html)*?!*
+- [x] A Classic Hangman scorekeeping animation using [Processing.js](http://processingjs.org/)
+- [x] F5 Key disabled
 #
 brought to you by:
 - **HTML**
