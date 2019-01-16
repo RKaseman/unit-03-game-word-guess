@@ -2,13 +2,23 @@
 
 [Hedonometer Hangman](https://rkaseman.github.io/unit-03-game-word-guess/)
 
-- [x] Browser-based interactive game
-- [x] tbd
-  - [x] tbd
+- [x] Browser-based game
+- [x] JavaScript updates both:
+  - [x] HTML
+  - [x] CSS
+- [x] Choose a theme (Classic Hangman)
+- [x] Use key events to listen for the letters that your players will type
+- [x] Display the following on the page
+  - [ ] Press any key to get started
+  - [ ] Wins (haven't decided about this)
+  - [ ] Number of Guesses Remaining (not doing this since the hangman animation is its own score)
+  - [ ] Letters Already Guessed (may or may not do this since the game says a letter was already picked when repeated)
+  - [ ] After the user wins/loses the game should automatically choose another word and make the user play it (will be chosen from 3 Hedonometer data results)
 #
 ### Nice-to-haves added
 #
-- [x] tbd
+- [x] F5 Key disabled
+- [x] The (what the hell is a) [HEDONOMETER](http://hedonometer.org/about.html)*?!*
 #
 brought to you by:
 - **HTML**
