@@ -8,7 +8,7 @@
   - [x] CSS
 - [x] Choose a theme (Classic Hangman)
 - [x] Use key events to listen for the letters that your players will type
-- [x] Display the following on the page
+- [ ] Display the following on the page
   - [ ] Press any key to get started
   - [ ] Wins (haven't decided about this)
   - [ ] Number of Guesses Remaining (not doing this since the hangman animation is its own score)
@@ -18,7 +18,7 @@
 ### Nice-to-haves added
 #
 - [x] F5 Key disabled
-- [x] The (what the hell is a) [HEDONOMETER](http://hedonometer.org/about.html)*?!*
+- [ ] The (what the hell is a) [HEDONOMETER](http://hedonometer.org/about.html)*?!*
 #
 brought to you by:
 - **HTML**
