@@ -2,15 +2,30 @@
 var sketchProc = function (processingInstance) {
     with (processingInstance) {
         size(400, 400);
-        // frameRate(30);
         frameRate(4);
 
         var stickmanY = 128;
+
+        function doubleH() {
+            textAlign(CENTER, CENTER);
+            textSize(384);
+            // shadow
+            fill(72, 0, 72);
+            text("H", 208, 208);
+            // foreground
+            fill(184, 0, 0);
+            text("H", 192, 192);
+        }
 
         function muteBkgd() {
             noStroke();
             fill(0, 0, 0, 192);
             rect(8, 8, 384, 384);
+        }
+
+        function gameOver() {
+            textSize(128);
+            text("GAME\nOVER", 200, 200);
         }
 
         // draw the stickman in stages
@@ -61,17 +76,6 @@ var sketchProc = function (processingInstance) {
             // for all line segment caps
             strokeCap(SQUARE);
 
-            // "H";
-            textAlign(CENTER, CENTER);
-            textSize(384);
-            // shadow
-            fill(72, 0, 72);
-            text("H", 208, 208);
-            
-            // foreground
-            fill(184, 0, 0);
-            text("H", 192, 192);
-
             // corners
             strokeWeight(16);
             stroke(0, 0, 0);
@@ -79,17 +83,24 @@ var sketchProc = function (processingInstance) {
             line(336, 0, 400, 64);
 
             var gameState = document.getElementById("game-state").innerHTML
+
+            if (gameState == 0) {
+                doubleH();
+            }
             if (gameState == 1) {
+                doubleH();
                 muteBkgd();
                 drawHead();
             }
             if (gameState == 2) {
+                doubleH();
                 muteBkgd();
                 drawHead();
                 drawBody();
             }
 
             if (gameState == 3) {
+                doubleH();
                 muteBkgd();
                 drawHead();
                 drawBody();
@@ -97,6 +108,7 @@ var sketchProc = function (processingInstance) {
             }
 
             if (gameState == 4) {
+                doubleH();
                 muteBkgd();
                 drawHead();
                 drawBody();
@@ -105,6 +117,7 @@ var sketchProc = function (processingInstance) {
             }
 
             if (gameState == 5) {
+                doubleH();
                 muteBkgd();
                 drawHead();
                 drawBody();
@@ -114,6 +127,7 @@ var sketchProc = function (processingInstance) {
             }
 
             if (gameState == 6) {
+                doubleH();
                 muteBkgd();
                 drawHead();
                 drawBody();
@@ -124,6 +138,7 @@ var sketchProc = function (processingInstance) {
             }
 
             if (gameState == 7) {
+                gameOver();
                 muteBkgd();
                 drawHead();
                 drawBody();

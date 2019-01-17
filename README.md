@@ -25,7 +25,7 @@ brought to you by:
 - **HTML**
 - **CSS**
 - **JavaScript**
-- **processing.js**
+- **Processing.js**
 #
 I always keep RWD and media queries in mind.
 
