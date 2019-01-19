@@ -11,9 +11,9 @@
 - [ ] Display the following on the page
   - [ ] Press any key to get started
   - [ ] Wins (haven't decided about this)
-  - [ ] Number of Guesses Remaining (not doing this since the hangman animation is its own score)
+  - [x] Number of Guesses Remaining (not doing this since the hangman animation is its own score)
   - [ ] Letters Already Guessed (may or may not do this since the game says a letter was already picked when repeated)
-  - [ ] After the user wins/loses the game should automatically choose another word and make the user play it (will be chosen from 3 Hedonometer data results)
+  - [x] After the user wins/loses the game should automatically choose another word and make the user play it (will be chosen from 3 Hedonometer data results)
 #
 ### Nice-to-haves added
 #

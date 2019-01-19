@@ -24,6 +24,7 @@ var sketchProc = function (processingInstance) {
         }
 
         function gameOver() {
+            textAlign(CENTER, CENTER);
             textSize(128);
             text("GAME\nOVER", 200, 200);
         }
@@ -32,41 +33,41 @@ var sketchProc = function (processingInstance) {
         function drawHead() {
             // arc(x, y, width, height, start, stop)
             noFill();
-            strokeWeight(4);
+            strokeWeight(6);
             stroke(0, 0, 192);
-            arc(200, stickmanY, 32, 40, -1, 2);
-            arc(200, stickmanY, 32, 40, 2, 4);
-            arc(200, stickmanY, 56, 36, 3.7, 5.1);
+            arc(200, stickmanY, 56, 64, -1, 2);
+            arc(200, stickmanY, 56, 64, 2, 4);
+            arc(200, stickmanY, 80, 60, 3.7, 5.1);
         }
 
         function drawBody() {
-            line(200, stickmanY + 16, 200, stickmanY + 56);
+            line(200, stickmanY + 32, 200, stickmanY + 96);
         }
 
         function drawLeftArm() {
-            line(200, stickmanY + 32, 184, stickmanY + 48);
+            line(200, stickmanY + 40, 184, stickmanY + 88);
         }
 
         function drawRightArm() {
-            line(200, stickmanY + 32, 216, stickmanY + 48);
+            line(200, stickmanY + 40, 216, stickmanY + 88);
         }
 
         function drawLeftLeg() {
-            line(200, stickmanY + 56, 184, stickmanY + 88);
+            line(200, stickmanY + 96, 184, stickmanY + 152);
         }
 
         function drawRightLeg() {
-            line(200, stickmanY + 56, 216, stickmanY + 88);
+            line(200, stickmanY + 96, 216, stickmanY + 152);
         }
 
         function drawEyes() {
-            strokeWeight(1);
-            line(192, stickmanY - 8, 198, stickmanY - 2);
-            line(192, stickmanY - 2, 198, stickmanY - 8);
-            translate(10, 0);
-            line(192, stickmanY - 8, 198, stickmanY - 2);
-            line(192, stickmanY - 2, 198, stickmanY - 8);
-            translate(-10, 0);
+            strokeWeight(2);
+            line(188, stickmanY - 8, 194, stickmanY - 2);
+            line(188, stickmanY - 2, 194, stickmanY - 8);
+            translate(16, 0);
+            line(188, stickmanY - 8, 194, stickmanY - 2);
+            line(188, stickmanY - 2, 194, stickmanY - 8);
+            translate(-16, 0);
         }
 
         draw = function () {
