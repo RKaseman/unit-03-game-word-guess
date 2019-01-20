@@ -32,3 +32,5 @@ I always keep RWD and media queries in mind.
 This project isn't far enough complete visually to worry about them yet.
 
 This is my first use of CSS variables.
+
+I was dismayed when I discovered the Hedonometer API hasn't been up and running for a while, so I had to get creative in order to use it at all.
