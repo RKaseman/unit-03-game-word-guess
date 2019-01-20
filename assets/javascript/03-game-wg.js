@@ -12,13 +12,15 @@ $(document).ready(function () {
             // console.log("test =", test);
         // });
 
-    $.get("http://hedonometer.org/words.html", function (data, status) {
-        // alert("Data: " + data + "\nStatus: " + status);
-        var testGet = $(data).load("div.container").children("div.row").children("div#viewpanel").children(".tablesorter").children("tbody").children("tr").children("td").text();
-        // console.log("$(data) =", $(data));
-        console.log("testGet =", testGet);
-        // console.log("data =", data);
-        console.log("status =", status);
+    $.get("https://hedonometer.org/words.html", function (data, status) {
+        var testGet = $(data).load("div.container").children("div.row").children("#viewpanel").children(".tablesorter").children("tbody").children("tr").children("td:nth-of-type(1)");
+        var x = $(testGet).toArray();
+        var i;
+        for (i = 0; i < testGet.length; i++) {
+        console.log("testGet =", x[i]);
+        // console.log("testGet.length =", testGet.length);
+        // console.log("status =", status);
+    }
     });
 
     // var wordArray = [
