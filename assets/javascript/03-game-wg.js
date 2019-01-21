@@ -3,27 +3,25 @@ $(document).ready(function () {
 
     testArray = [];
 
-    var wordArray = [
-        "first",
-        "second",
-        "third",
-        "fourth",
-        "fifth",
-        "sixth",
-        "seventh",
-        "eigth"
-    ];
+    // var wordArray = [
+    //     "first",
+    //     "second",
+    //     "third",
+    //     "fourth",
+    //     "fifth",
+    //     "sixth",
+    //     "seventh",
+    //     "eigth"
+    // ];
 
     $.get("https://hedonometer.org/words.html", function (data, status) {
         var testGet = $(data).load("div.container").children("div.row").children("#viewpanel").children(".tablesorter").children("tbody").children("tr").children("td:nth-of-type(1)").contents();
         for (var i = 0; i < testGet.length; i++) {
             testArray.push(testGet[i].textContent);
         }
-        // console.log("testArray = ", testArray);
-        console.log("wordArray = ", wordArray);
     })
         .done(function () {
-            console.log(".done ", testArray);
+            console.log(".done");
 
             var matchIndex;
             var messageSays = document.getElementById("message");
