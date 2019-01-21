@@ -23,11 +23,7 @@ h1 {
     line-height: 96px;
 }
 
-#canvas-container {
-    margin: inherit;
-}
-
-canvas {
+#canvas-container, canvas {
     margin: inherit;
 }
 
