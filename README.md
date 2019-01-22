@@ -27,9 +27,7 @@ brought to you by:
 - **JavaScript**
 - **Processing.js**
 #
-I always keep RWD and media queries in mind.
-
-This project isn't far enough complete visually to worry about them yet.
+I always keep RWD and media queries in mind. This project isn't far enough complete visually to worry about them yet.
 
 This is my first use of CSS variables.
 

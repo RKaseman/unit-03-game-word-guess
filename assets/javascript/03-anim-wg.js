@@ -11,16 +11,20 @@ var sketchProc = function (processingInstance) {
             textSize(384);
             // shadow
             fill(72, 0, 72);
-            text("H", 208, 208);
+            translate(32, 32);
+            text("H", 200, 200);
             // foreground
             fill(184, 0, 0);
-            text("H", 192, 192);
+            translate(-64, -64);
+            text("H", 200, 200);
+            popMatrix();
         }
 
         function muteBkgd() {
+            rectMode(CENTER);
             noStroke();
-            fill(0, 0, 0, 192);
-            rect(8, 8, 384, 384);
+            fill(0, 0, 0, 216);
+            rect(200, 200, 384, 384);
         }
 
         function gameOver() {
@@ -67,7 +71,7 @@ var sketchProc = function (processingInstance) {
             translate(16, 0);
             line(188, stickmanY - 8, 194, stickmanY - 2);
             line(188, stickmanY - 2, 194, stickmanY - 8);
-            translate(-16, 0);
+            popMatrix();
         }
 
         draw = function () {

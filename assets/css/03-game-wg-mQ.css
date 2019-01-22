@@ -9,6 +9,10 @@
 
 @media only screen and (max-width: 448px) {
 
+    canvas {
+        width: 72%;
+    }
+
 }
 
 @media only screen and (max-width: 320px) {
