@@ -33,6 +33,7 @@ $(document).ready(function () {
             guessed = [];
             counter = 0;
             var wordPicked = Math.floor(Math.random() * wordArray.length);
+            console.log("wordArray[wordPicked]", wordArray[wordPicked] + " " + wordPicked);
             var lettersToGuess = wordArray[wordPicked].split("");
             document.getElementById("game-state").innerHTML = counter;
             messageSays.innerHTML = "pick your letter";
@@ -40,6 +41,8 @@ $(document).ready(function () {
                 letters.push(lettersToGuess[i]);
                 document.getElementById("word-to-guess").innerHTML = "<span>" + letters.join("<hr></span><span>") + "<hr></span>";
             };
+            wordArray.splice([wordPicked], 1);
+            console.log("wordArray.length (new) =", wordArray.length);
 
             document.onkeydown = function (event) {
                 if (counter < 7) {
