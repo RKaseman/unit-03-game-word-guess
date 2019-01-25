@@ -10,8 +10,8 @@
 - [x] Use key events to listen for the letters that your players will type
 - [ ] Display the following on the page
   - [ ] Press any key to get started
-  - [ ] Wins (haven't decided about this)
-  - [x] Number of Guesses Remaining (not doing this since the hangman animation is its own score)
+  - [ ] Wins
+  - [x] Number of Guesses Remaining -- not doing this since the hangman animation is its own score
   - [ ] Letters Already Guessed (may or may not do this since the game says a letter was already picked when repeated)
   - [x] After the user wins/loses the game should automatically choose another word and make the user play it (will be chosen from 3 Hedonometer data results)
 #
@@ -31,4 +31,4 @@ I always keep RWD and media queries in mind. This project isn't far enough compl
 
 This is my first use of CSS variables.
 
-I was dismayed when I discovered the Hedonometer API hasn't been up and running for a while, so I had to get creative in order to use it at all.
+I was dismayed when I discovered the Hedonometer API hasn't been up and running for a while, so I had to get creative in order to use it at all. My code scrapes [their word list's top 25 happy words](http://hedonometer.org/words.html) for the randomly picked word.

@@ -3,6 +3,10 @@
     box-sizing: border-box;
 }
 
+em {
+    font-style: italic;
+}
+
 html {
     font-family: "East Sea Dokdo", cursive;
     background-color: rgb(48, 0, 48);
@@ -18,9 +22,35 @@ body {
     margin-bottom: 24px;
 }
 
+header {
+    line-height: 80px;
+}
+
 h1 {
     font-size: 5em;
-    line-height: 96px;
+    margin-top: 16px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a, button {
+    background: none;
+    width: 200px;
+    cursor: pointer;
+    font-family: sans-serif;
+    font-weight: 600;
+    font-size: 1em;
+    border: none;
+    margin: 0 8px;
+    padding: 0;
+}
+
+a:hover, button:hover {
+    font-size: 1.1em;
+    color: rgb(128, 0, 128);
 }
 
 #canvas-container, canvas {
@@ -59,7 +89,7 @@ hr {
     position: absolute;
     top: 32px;
     height: 4px;
-    background-color: rgb(72, 0, 72);
+    background-color: rgb(128, 0, 128);
 }
 
 #game-state {
