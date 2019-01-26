@@ -1,12 +1,15 @@
 
 $(document).ready(function () {
 
+    var modalState = document.getElementById("modal-box");
+
     document.getElementById("modal-trig").onclick = function() {
-        document.getElementById("modal-box").style.visibility = "visible";
+        modalState.style.visibility = "visible";
     };
     
     document.getElementById("modal-close").onclick = function() {
-        document.getElementById("modal-box").style.visibility = "hidden";
-    }
+        modalState.style.visibility = "hidden";
+    };
+
 });
 

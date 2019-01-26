@@ -67,6 +67,7 @@ a:hover, button:hover {
     width: 384px;
     height: 384px;
     background-color: rgb(216, 216, 216, 0.95);
+    border: 1px solid grey;
 }
 
 #modal-box, #canvas-container {
@@ -74,18 +75,21 @@ a:hover, button:hover {
 }
 
 #modal-box, #modal-about, #canvas-container, canvas {
-    /* border: 1px dashed black; */
     margin: inherit;
 }
 
 #modal-close {
-    width: 32px;
-    /* text-align: right; */
+    text-align: right;
     cursor: pointer;
     font-size: 24px;
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
     padding: 4px;
     margin: 2px;
+}
+
+#modal-close {
+    font-size: 12px;
+    color: rgb(64, 64, 64);
 }
 
 .overlay > p {
