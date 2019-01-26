@@ -15,11 +15,10 @@ html {
 body {
     --letter-block-width: 40px;
     width: 752px;
-    background-color: rgb(221, 221, 221);
+    background-color: rgb(216, 216, 216);
     text-align: center;
     border: 16px solid rgb(0, 0, 0);
-    margin: auto;
-    margin-bottom: 24px;
+    margin: 0 auto 24px;
 }
 
 .flex-container {
@@ -61,16 +60,17 @@ a:hover, button:hover {
     color: rgb(128, 0, 128);
 }
 
-#modal-box, #canvas-container {
-    position: relative;
-}
-
 #modal-box {
-    visibility: hidden;
+    /* visibility: hidden; */
     z-index: 1;
     top: 8px;
     width: 384px;
-    background-color: rgb(255, 72, 0, 0.75);
+    height: 384px;
+    background-color: rgb(216, 216, 216, 0.95);
+}
+
+#modal-box, #canvas-container {
+    position: relative;
 }
 
 #modal-box, #modal-about, #canvas-container, canvas {
@@ -78,8 +78,23 @@ a:hover, button:hover {
     margin: inherit;
 }
 
+#modal-close {
+    width: 32px;
+    /* text-align: right; */
+    cursor: pointer;
+    font-size: 24px;
+    border: 1px solid blue;
+    padding: 4px;
+    margin: 2px;
+}
+
+.overlay > p {
+    text-align: left;
+    padding: 16px;
+}
+
 #canvas-container {
-    margin-top: -48px;
+    margin-top: -204px;
 }
 
 #word-to-guess, #message {
@@ -89,8 +104,7 @@ a:hover, button:hover {
 }
 
 #message {
-    height: 36px;
-    padding: 8px 0;
+    line-height: 64px;
 }
 
 span, hr {
