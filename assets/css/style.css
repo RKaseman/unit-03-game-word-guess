@@ -92,8 +92,9 @@ a:hover, button:hover {
 }
 
 .overlay > p {
+    font: menu;
     text-align: left;
-    padding: 16px;
+    padding: 8px;
 }
 
 #canvas-container {
