@@ -14,12 +14,17 @@ html {
 
 body {
     --letter-block-width: 40px;
-    background-color: rgb(221, 221, 221);
     width: 752px;
+    background-color: rgb(221, 221, 221);
     text-align: center;
-    border: 8px solid rgb(0, 0, 0);
+    border: 16px solid rgb(0, 0, 0);
     margin: auto;
     margin-bottom: 24px;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: center;
 }
 
 header {
@@ -31,6 +36,10 @@ h1 {
     margin-top: 16px;
 }
 
+a, button, #modal-box {
+    font-family: sans-serif;
+}
+
 a {
     text-decoration: none;
 }
@@ -39,13 +48,12 @@ a, button {
     background: none;
     width: 200px;
     cursor: pointer;
-    font-family: sans-serif;
     font-weight: 600;
     font-size: 1em;
     color: rgb(64, 0, 64, 0.5);
     border: none;
-    margin: 0 8px;
     padding: 0;
+    margin: 0 8px;
 }
 
 a:hover, button:hover {
@@ -54,17 +62,19 @@ a:hover, button:hover {
 }
 
 #modal-box {
-    width: 256px;
-    border: 1px dashed red;
+    position: relative;
+    /* display: none; */
+    top: 128px;
+    width: 100%;
+    /* width: 128px; */
+    /* height: 128px; */
+    background-color: rgb(255, 72, 0, 0.75);
+    border: 4px dashed green;
 }
 
-#canvas-container, canvas {
+#modal-box, #modal-about, #canvas-container, canvas {
+    border: 1px dashed black;
     margin: inherit;
-}
-
-.flex-container {
-    display: flex;
-    justify-content: center;
 }
 
 #word-to-guess, #message {
@@ -98,6 +108,6 @@ hr {
 }
 
 #game-state {
-    visibility: hidden;
+    display: none;
 }
 
