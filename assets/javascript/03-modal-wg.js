@@ -1,10 +1,12 @@
 
 $(document).ready(function () {
 
-    console.log("modal connected");
-
     document.getElementById("modal-trig").onclick = function() {
-        document.getElementById("modal-about").style.display = "block";
+        document.getElementById("modal-box").style.visibility = "visible";
     };
+    
+    document.getElementById("modal-close").onclick = function() {
+        document.getElementById("modal-box").style.visibility = "hidden";
+    }
 });
 

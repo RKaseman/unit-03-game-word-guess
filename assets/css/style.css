@@ -61,20 +61,25 @@ a:hover, button:hover {
     color: rgb(128, 0, 128);
 }
 
-#modal-box {
+#modal-box, #canvas-container {
     position: relative;
-    /* display: none; */
-    top: 128px;
-    width: 100%;
-    /* width: 128px; */
-    /* height: 128px; */
+}
+
+#modal-box {
+    visibility: hidden;
+    z-index: 1;
+    top: 8px;
+    width: 384px;
     background-color: rgb(255, 72, 0, 0.75);
-    border: 4px dashed green;
 }
 
 #modal-box, #modal-about, #canvas-container, canvas {
-    border: 1px dashed black;
+    /* border: 1px dashed black; */
     margin: inherit;
+}
+
+#canvas-container {
+    margin-top: -48px;
 }
 
 #word-to-guess, #message {
