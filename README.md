@@ -16,7 +16,7 @@
   - [x] After the user wins/loses the game should automatically choose another word and make the user play it
 #
 ### Nice-to-haves added
-- [ ] The (what-the-hell-is-a ?) [HEDONOMETER](http://hedonometer.org/about.html) *!*
+- [x] The (what-the-hell-is-a ?) [HEDONOMETER](http://hedonometer.org/about.html) *!*
 - [x] Classic Hangman scorekeeping animation using [Processing.js](http://processingjs.org/)
 - [x] F5 key disabled
 #
@@ -33,4 +33,4 @@ This is my first use of CSS variables.
 
 I added JQuery for the Ajax call to the Hedonometer website.
 
-I was dismayed when I discovered the Hedonometer API hasn't been up and running for a while, so I had to get creative in order to use it at all. My code scrapes [their word list's top 25 happy words](http://hedonometer.org/words.html) for the selection set.
+I was dismayed when I discovered the Hedonometer API hasn't been up and running for a while, so I had to get creative in order to use it at all. My code scrapes [their word list's top 25 happy words](http://hedonometer.org/words.html) for the selection set. I wanted to get the three top words every day for continual variation, but they're contained in a modal. If they can be scraped I'll figure out how but I don't want to get bogged down in one project for *too* long.
