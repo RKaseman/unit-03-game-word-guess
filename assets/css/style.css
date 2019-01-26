@@ -61,7 +61,7 @@ a:hover, button:hover {
 }
 
 #modal-box {
-    /* visibility: hidden; */
+    visibility: hidden;
     z-index: 1;
     top: 8px;
     width: 384px;
