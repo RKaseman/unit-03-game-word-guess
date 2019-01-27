@@ -14,6 +14,7 @@ html {
 
 body {
     --letter-block-width: 40px;
+    --footer-element-height: 64px;
     width: 752px;
     background-color: rgb(216, 216, 216);
     text-align: center;
@@ -45,20 +46,19 @@ a, button, #modal-box {
 
 a {
     text-decoration: none;
-    line-height: 128px;
+    line-height: var(--footer-element-height);
 }
 
 a, button {
     background: none;
     width: 200px;
-    height: 128px;
+    height: var(--footer-element-height);
     cursor: pointer;
     font-weight: 600;
     font-size: 1em;
     color: rgb(64, 0, 64, 0.5);
     border: none;
     padding: 0;
-    margin: 8px;
 }
 
 a:hover, button:hover {

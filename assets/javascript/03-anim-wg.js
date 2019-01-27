@@ -18,20 +18,22 @@ var sketchProc = function (processingInstance) {
             translate(-64, -64);
             text("H", 200, 200);
             popMatrix();
-        }
+        };
 
+        // darken the "logo"
         function muteBkgd() {
             rectMode(CENTER);
             noStroke();
             fill(0, 0, 0, 216);
             rect(200, 200, 384, 384);
-        }
+        };
 
+        // display "game over" text
         function gameOver() {
             textAlign(CENTER, CENTER);
             textSize(128);
             text("GAME\nOVER", 200, 200);
-        }
+        };
 
         // draw the stickman in stages
         function drawHead() {
@@ -42,27 +44,27 @@ var sketchProc = function (processingInstance) {
             arc(200, stickmanY, 56, 64, -1, 2);
             arc(200, stickmanY, 56, 64, 2, 4);
             arc(200, stickmanY, 80, 60, 3.7, 5.1);
-        }
+        };
 
         function drawBody() {
             line(200, stickmanY + 32, 200, stickmanY + 96);
-        }
+        };
 
         function drawLeftArm() {
             line(200, stickmanY + 40, 184, stickmanY + 88);
-        }
+        };
 
         function drawRightArm() {
             line(200, stickmanY + 40, 216, stickmanY + 88);
-        }
+        };
 
         function drawLeftLeg() {
             line(200, stickmanY + 96, 184, stickmanY + 152);
-        }
+        };
 
         function drawRightLeg() {
             line(200, stickmanY + 96, 216, stickmanY + 152);
-        }
+        };
 
         function drawEyes() {
             strokeWeight(2);
@@ -72,7 +74,7 @@ var sketchProc = function (processingInstance) {
             line(188, stickmanY - 8, 194, stickmanY - 2);
             line(188, stickmanY - 2, 194, stickmanY - 8);
             popMatrix();
-        }
+        };
 
         draw = function () {
             // canvas color
@@ -91,27 +93,25 @@ var sketchProc = function (processingInstance) {
 
             if (gameState == 0) {
                 doubleH();
-            }
+            };
             if (gameState == 1) {
                 doubleH();
                 muteBkgd();
                 drawHead();
-            }
+            };
             if (gameState == 2) {
                 doubleH();
                 muteBkgd();
                 drawHead();
                 drawBody();
-            }
-
+            };
             if (gameState == 3) {
                 doubleH();
                 muteBkgd();
                 drawHead();
                 drawBody();
                 drawLeftArm();
-            }
-
+            };
             if (gameState == 4) {
                 doubleH();
                 muteBkgd();
@@ -119,8 +119,7 @@ var sketchProc = function (processingInstance) {
                 drawBody();
                 drawLeftArm();
                 drawLeftLeg();
-            }
-
+            };
             if (gameState == 5) {
                 doubleH();
                 muteBkgd();
@@ -129,8 +128,7 @@ var sketchProc = function (processingInstance) {
                 drawLeftArm();
                 drawLeftLeg();
                 drawRightArm();
-            }
-
+            };
             if (gameState == 6) {
                 doubleH();
                 muteBkgd();
@@ -140,8 +138,7 @@ var sketchProc = function (processingInstance) {
                 drawLeftLeg();
                 drawRightArm();
                 drawRightLeg();
-            }
-
+            };
             if (gameState == 7) {
                 gameOver();
                 muteBkgd();
@@ -152,7 +149,7 @@ var sketchProc = function (processingInstance) {
                 drawRightArm();
                 drawRightLeg();
                 drawEyes();
-            }
+            };
 
             // sketch border
             strokeWeight(8);
@@ -168,7 +165,7 @@ var sketchProc = function (processingInstance) {
             stroke(184, 0, 0);
             line(2, 0, 2, 400);
 
-        }
-    }
+        };
+    };
 };
 
