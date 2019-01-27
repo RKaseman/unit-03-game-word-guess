@@ -25,6 +25,7 @@ $(document).ready(function () {
 
         var matchIndex;
         var messageSays = document.getElementById("message");
+        var singleLetters = document.getElementsByTagName("span");
 
         gameInitialize();
 
@@ -61,12 +62,12 @@ $(document).ready(function () {
                     guessed.push(userGuess);
                     if (inLettersArray) {
                         matchIndex = letters.indexOf(userGuess);
-                        document.getElementsByTagName("span")[matchIndex].style.visibility = "visible";
+                        singleLetters[matchIndex].style.visibility = "visible";
                         messageSays.innerHTML = "good guess";
                         for (var j = matchIndex + 1; j < letters.length; j++) {
                             matchIndex++;
-                            if (userGuess === document.getElementsByTagName("span")[matchIndex].innerHTML.charAt(0)) {
-                                document.getElementsByTagName("span")[matchIndex].style.visibility = "visible";
+                            if (userGuess === singleLetters[matchIndex].innerHTML.charAt(0)) {
+                                singleLetters[matchIndex].style.visibility = "visible";
                             };
                         };
                     }
@@ -76,18 +77,22 @@ $(document).ready(function () {
                         messageSays.innerHTML = "that is not a letter in the word";
                     };
                 };
+                testVisibility();
+
                 if (counter == 7) {
+                    for (var x = 0; x < letters.length; x++) {
+                        singleLetters[x].style.visibility = "visible";
+                        singleLetters[x].style.color = "red";
+                    };
                     messageSays.innerHTML = "you lose - press space to continue";
                     gameOver();
                 };
 
                 // letter visibility check
-                testVisibility();
-
                 function testVisibility() {
                     var isVisible = [];
                     for (var k = 0; k < letters.length; k++) {
-                        var findVisible = document.getElementsByTagName("span")[k].style.visibility;
+                        var findVisible = singleLetters[k].style.visibility;
                         if (findVisible === "visible") {
                             isVisible.push(k);
                             if (isVisible.length == letters.length) {
