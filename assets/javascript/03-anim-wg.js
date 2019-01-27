@@ -155,7 +155,7 @@ var sketchProc = function (processingInstance) {
 
             var gameState = document.getElementById("game-state").innerHTML
 
-            if (gameState == 0.5) {
+            if (gameState == 0) {
                 doubleH();
             };
             if (gameState == 1) {
@@ -193,7 +193,7 @@ var sketchProc = function (processingInstance) {
                 drawLeftLeg();
                 drawRightArm();
             };
-            if (gameState == 0) {
+            if (gameState == 6) {
                 doubleH();
                 muteBkgd();
                 drawHead();
@@ -202,16 +202,16 @@ var sketchProc = function (processingInstance) {
                 drawLeftLeg();
                 drawRightArm();
                 drawRightLeg();
-            // };
-            // if (gameState == 7) {
-            //     gameOver();
-            //     muteBkgd();
-            //     drawHead();
-            //     drawBody();
-            //     drawLeftArm();
-            //     drawLeftLeg();
-            //     drawRightArm();
-            //     drawRightLeg();
+            };
+            if (gameState == 7) {
+                gameOver();
+                muteBkgd();
+                drawHead();
+                drawBody();
+                drawLeftArm();
+                drawLeftLeg();
+                drawRightArm();
+                drawRightLeg();
                 drawEyes();
             };
 
