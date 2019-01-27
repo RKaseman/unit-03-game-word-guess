@@ -24,17 +24,13 @@
 <body>
     <header>
         <h1>Hedonometer Hangman</h1>
-        <h2 class="flex-container">
-            <a href="http://hedonometer.org/about.html" target="_blank">um...hedo<em>-what??</em></a>
-            <button id="modal-trig">about this project</button>
-        </h2>
     </header>
 
     <div id="modal-box" class="flex-container">
         <div id="modal-about">
             <div id="modal-close">close</div>
             <div class="overlay">
-                <p>I'm fascinated by the Hedonometer and have been looking for an opportunity to incorporate it into my coding ever since I stumbled across the API...that's no longer updated...ACK! Nevertheless, this game collects the 25 "happiest" scored and ranked words used by people on any given day.</p>
+                <p>I'm fascinated by the Hedonometer and have been looking for an opportunity to incorporate it into my coding ever since I stumbled across the API...that's no longer updated...ACK! Nevertheless, this game collects via scrape the 25 "happiest" scored and ranked words used by people on any given day.</p>
                 <p>That is a ridiculously broad way to define their work and its implications, but this is just my little demo hangman game. The Hedonometer is ironic in this setting and I like that.</p>
                 <p>Words don't repeat; 25 and the game is done. (I'll be revisiting it in the future to see if I can grab the entire word list for the selection set.)</p>
                 <p>Some of the words are variations of each other.</p>
@@ -54,6 +50,14 @@
     <div>
         <p id="game-state"></p>
     </div>
+    <footer>
+        <h2 class="flex-container">
+            <!-- <button> -->
+                <a href="http://hedonometer.org/about.html" target="_blank">um...hedo<em>-what??</em></a>
+            <!-- </button> -->
+            <button id="modal-trig">about this project</button>
+        </h2>
+    </footer>
 
     <script src="./assets/javascript/processing-1.4.8.min.js"></script>
     <script src="./assets/javascript/03-game-wg.js"></script>

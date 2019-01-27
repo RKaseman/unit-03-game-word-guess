@@ -30,6 +30,10 @@ header {
     line-height: 80px;
 }
 
+footer {
+    border-top: 1px solid rgb(128, 128, 128);
+}
+
 h1 {
     font-size: 5em;
     margin-top: 16px;
@@ -41,18 +45,20 @@ a, button, #modal-box {
 
 a {
     text-decoration: none;
+    line-height: 128px;
 }
 
 a, button {
     background: none;
     width: 200px;
+    height: 128px;
     cursor: pointer;
     font-weight: 600;
     font-size: 1em;
     color: rgb(64, 0, 64, 0.5);
     border: none;
     padding: 0;
-    margin: 0 8px;
+    margin: 8px;
 }
 
 a:hover, button:hover {
@@ -67,7 +73,7 @@ a:hover, button:hover {
     width: 384px;
     height: 384px;
     background-color: rgb(216, 216, 216, 0.95);
-    border: 1px solid grey;
+    border: 1px solid rgb(128, 128, 128);
 }
 
 #modal-box, #canvas-container {
@@ -81,14 +87,10 @@ a:hover, button:hover {
 #modal-close {
     text-align: right;
     cursor: pointer;
-    font-size: 24px;
-    padding: 4px;
-    margin: 2px;
-}
-
-#modal-close {
     font-size: 12px;
     color: rgb(64, 64, 64);
+    padding: 4px;
+    margin: 2px;
 }
 
 .overlay > p {
