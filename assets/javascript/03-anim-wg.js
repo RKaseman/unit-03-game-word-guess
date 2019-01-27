@@ -5,18 +5,22 @@ var sketchProc = function (processingInstance) {
         frameRate(4);
 
         var stickmanY = 128;
+        var midPt = 200;
 
         function doubleH() {
+            function theH() {
+                text("H", midPt, midPt);
+            };
             textAlign(CENTER, CENTER);
             textSize(384);
             // shadow
             fill(72, 0, 72);
             translate(32, 32);
-            text("H", 200, 200);
+            theH();
             // foreground
             fill(184, 0, 0);
             translate(-64, -64);
-            text("H", 200, 200);
+            theH();
             popMatrix();
         };
 
@@ -25,54 +29,114 @@ var sketchProc = function (processingInstance) {
             rectMode(CENTER);
             noStroke();
             fill(0, 0, 0, 216);
-            rect(200, 200, 384, 384);
+            rect(midPt, midPt, 384, 384);
         };
 
         // display "game over" text
         function gameOver() {
             textAlign(CENTER, CENTER);
             textSize(128);
-            text("GAME\nOVER", 200, 200);
+            text("GAME\nOVER", midPt, midPt);
+        };
+
+        // shadow and foreground for sketch depth
+        function shadow() {
+            stroke(0, 0, 0);
+            translate(2, 2);
+        };
+
+        function foreground() {
+            stroke(0, 0, 192);
+            translate(-2, -2);
         };
 
         // draw the stickman in stages
         function drawHead() {
             // arc(x, y, width, height, start, stop)
+            function theHead() {
+                arc(midPt, stickmanY, 56, 64, -1, 2);
+                arc(midPt, stickmanY, 56, 64, 2, 4);
+                arc(midPt, stickmanY, 80, 60, 3.7, 5.1);
+            };
             noFill();
             strokeWeight(6);
-            stroke(0, 0, 192);
-            arc(200, stickmanY, 56, 64, -1, 2);
-            arc(200, stickmanY, 56, 64, 2, 4);
-            arc(200, stickmanY, 80, 60, 3.7, 5.1);
+            shadow();
+            theHead();
+            foreground();
+            theHead();
+            popMatrix();
         };
 
         function drawBody() {
-            line(200, stickmanY + 32, 200, stickmanY + 96);
+            function theBody() {
+                line(midPt, stickmanY + 32, midPt, stickmanY + 96);
+            };
+            shadow();
+            theBody();
+            foreground();
+            theBody();
+            popMatrix();
         };
 
         function drawLeftArm() {
-            line(200, stickmanY + 40, 184, stickmanY + 88);
+            function leftArm() {
+                line(midPt - 6, stickmanY + 48, midPt - 24, stickmanY + 88);
+            };
+            shadow();
+            leftArm();
+            foreground();
+            leftArm();
+            popMatrix();
         };
 
         function drawRightArm() {
-            line(200, stickmanY + 40, 216, stickmanY + 88);
+            function rightArm() {
+                line(midPt + 6, stickmanY + 48, midPt + 24, stickmanY + 88);
+            };
+            shadow();
+            rightArm();
+            foreground();
+            rightArm();
+            popMatrix();
         };
 
         function drawLeftLeg() {
-            line(200, stickmanY + 96, 184, stickmanY + 152);
+            function leftLeg() {
+                line(midPt, stickmanY + 96, midPt - 24, stickmanY + 152);
+            };
+            shadow();
+            leftLeg();
+            foreground();
+            leftLeg();
+            popMatrix();
         };
 
         function drawRightLeg() {
-            line(200, stickmanY + 96, 216, stickmanY + 152);
+            function rightLeg() {
+                line(midPt, stickmanY + 96, midPt + 24, stickmanY + 152);
+            };
+            shadow();
+            rightLeg();
+            foreground();
+            rightLeg();
+            popMatrix();
         };
 
         function drawEyes() {
-            strokeWeight(2);
-            line(188, stickmanY - 8, 194, stickmanY - 2);
-            line(188, stickmanY - 2, 194, stickmanY - 8);
-            translate(16, 0);
-            line(188, stickmanY - 8, 194, stickmanY - 2);
-            line(188, stickmanY - 2, 194, stickmanY - 8);
+            pushMatrix();
+            function eyes() {
+                strokeWeight(2);
+                line(188, stickmanY - 8, 194, stickmanY - 2);
+                line(188, stickmanY - 2, 194, stickmanY - 8);
+                translate(16, 0);
+                line(188, stickmanY - 8, 194, stickmanY - 2);
+                line(188, stickmanY - 2, 194, stickmanY - 8);
+                translate(-16, 0);
+            };
+            shadow();
+            eyes();
+            foreground();
+            eyes();
             popMatrix();
         };
 
@@ -91,7 +155,7 @@ var sketchProc = function (processingInstance) {
 
             var gameState = document.getElementById("game-state").innerHTML
 
-            if (gameState == 0) {
+            if (gameState == 0.5) {
                 doubleH();
             };
             if (gameState == 1) {
@@ -129,7 +193,7 @@ var sketchProc = function (processingInstance) {
                 drawLeftLeg();
                 drawRightArm();
             };
-            if (gameState == 6) {
+            if (gameState == 0) {
                 doubleH();
                 muteBkgd();
                 drawHead();
@@ -138,16 +202,16 @@ var sketchProc = function (processingInstance) {
                 drawLeftLeg();
                 drawRightArm();
                 drawRightLeg();
-            };
-            if (gameState == 7) {
-                gameOver();
-                muteBkgd();
-                drawHead();
-                drawBody();
-                drawLeftArm();
-                drawLeftLeg();
-                drawRightArm();
-                drawRightLeg();
+            // };
+            // if (gameState == 7) {
+            //     gameOver();
+            //     muteBkgd();
+            //     drawHead();
+            //     drawBody();
+            //     drawLeftArm();
+            //     drawLeftLeg();
+            //     drawRightArm();
+            //     drawRightLeg();
                 drawEyes();
             };
 
